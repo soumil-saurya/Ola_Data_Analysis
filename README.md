@@ -91,7 +91,7 @@ USE ola;
 ```
 This creates and selects the database `ola` for storing booking records.
 
-Query 1. Retrieve all successful bookings:
+**Query 1**. Retrieve all successful bookings:
 ```sql
 #1 RETRIEVE ALL SUCCESSFUL BOOKINGS
 CREATE VIEW SUCCESSFUL_BOOKINGS AS
@@ -102,7 +102,7 @@ SELECT * FROM SUCCESSFUL_BOOKINGS;
 ```
 Explanation: This view retrieves all successful bookings, filtering out canceled or incomplete rides.
 
-Query 2. Find the average ride distance for each vehicle type:
+**Query 2**. Find the average ride distance for each vehicle type:
 ```sql
 #2 FIND THE AVERAGE RIDE DISTANCE FOR EACH VEHICLE TYPE
 CREATE VIEW AVG_RIDE_DISTANCE_FOR_EACH_VEHICLE_TYPE AS
@@ -113,7 +113,7 @@ SELECT * FROM AVG_RIDE_DISTANCE_FOR_EACH_VEHICLE_TYPE;
 ```
 This calculates the average ride distance for each type of vehicle used in the bookings.
 
-Query 3. Get the total number of cancelled rides by customers:
+**Query 3**. Get the total number of cancelled rides by customers:
 ```sql
 #3 GET THE TOTAL NUMBER OF CANCELED RIDES BY CUSTOMER
 CREATE VIEW CANCELED_RIDES_BY_CUSTOMER AS
@@ -124,7 +124,7 @@ SELECT * FROM CANCELED_RIDES_BY_CUSTOMER;
 ```
 This counts the total number of rides that were canceled by customers.
 
-Query 4. List the top 5 customers who booked the highest number of rides:
+**Query 4**. List the top 5 customers who booked the highest number of rides:
 ```sql
 #4 LIST THE TOP 5 CUSTOMERS WHO BOOKED THE HIGHEST NUMBER OF RIDES
 CREATE VIEW TOP_5_CUSTOMERS AS
@@ -138,7 +138,7 @@ SELECT * FROM TOP_5_CUSTOMERS;
 ```
 This lists the top 5 customers who booked the highest number of rides.
 
-Query 5. Get the number of rides cancelled by drivers due to personal and car-related issues:
+**Query 5**. Get the number of rides cancelled by drivers due to personal and car-related issues:
 ```sql
 #5 GET THE NUMBER OF RIDES CANCELED BY DRIVERS DUE TO PERSONAL AND CAR-RELATED ISSUES
 CREATE VIEW CANCELED_BY_DRIVERS_P_C_ISSUES AS
@@ -149,7 +149,7 @@ SELECT * FROM CANCELED_BY_DRIVERS_P_C_ISSUES;
 ```
 This counts the number of rides canceled by drivers due to personal or car-related reasons.
 
-Query 6. Find the maximum and minimum driver ratings for Prime Sedan bookings:
+**Query 6**. Find the maximum and minimum driver ratings for Prime Sedan bookings:
 ```sql
 #6 FIND THE MAXIMUM AND MINIMUM DRIVER RATINGS FOR PRIME SEDAN BOOKINGS
 CREATE VIEW MAX_MIN_DRIVER_RATING_PRIME_SEDAN AS
@@ -160,7 +160,7 @@ SELECT * FROM MAX_MIN_DRIVER_RATING_PRIME_SEDAN;
 ```
 This finds the highest and lowest driver ratings for Prime Sedan rides.
 
-Query 7. Retrieve all rides where payment was made using UPI:
+**Query 7**. Retrieve all rides where payment was made using UPI:
 ```sql
 #7 RETRIEVE ALL RIDES WHERE PAYMENT WAS MADE USING UPI
 CREATE VIEW PAYMENT_USING_UPI AS
@@ -171,7 +171,7 @@ SELECT * FROM PAYMENT_USING_UPI;
 ```
 This retrieves all bookings where UPI was used for payment.
 
-Query 8. Find the average customer rating per vehicle type:
+**Query 8**. Find the average customer rating per vehicle type:
 ```sql
 #8 FIND THE AVERAGE CUSTOMER RATING PER VEHICLE TYPE
 CREATE VIEW AVG_CUSTOMER_RATING_BY_VEHICLE_TYPE AS
@@ -182,7 +182,7 @@ SELECT * FROM AVG_CUSTOMER_RATING_BY_VEHICLE_TYPE;
 ```
 This query calculates the average customer rating for each vehicle type, helping evaluate customer satisfaction across different categories.
 
-Query 9. Calculate the total booking value of rides completed successfully:
+**Query 9**. Calculate the total booking value of rides completed successfully:
 ```sql
 CREATE VIEW TOTAL_SUCCESSFUL_RIDE_VALUE AS
 SELECT SUM(BOOKING_VALUE) AS TOTAL_SUCCESSFUL_RIDE_VALUE FROM BOOKINGS WHERE BOOKING_STATUS = 'SUCCESS';
@@ -192,7 +192,7 @@ SELECT * FROM TOTAL_SUCCESSFUL_RIDE_VALUE;
 ```
 This query computes the total revenue generated from successfully completed rides, providing key financial metrics.
 
-Query 10. List all incomplete rides along with the reason:
+**Query 10**. List all incomplete rides along with the reason:
 ```sql
 #10 LIST ALL INCOMPLETE RIDES ALONG WITH THE REASON
 CREATE VIEW INCOMPLETE_RIDES AS
@@ -212,12 +212,12 @@ A time-series chart showing the number of rides per day/week.
 
 A doughnut chart displaying the proportion of different booking statuses (success, cancelled by the customer, cancelled by the driver, etc.)
 
-[overall Screenshot]
+![alt image](https://github.com/soumil-saurya/Ola_Data_Analysis/blob/main/Overall%20Dashboard%20Screenshot.png?raw=true)
 
 ### 2. Top Vehicle Types by Ride Distance
 This visualization highlights which vehicle types are most utilized in terms of ride distance. For instance, longer bars for "Prime SUV" or "Bike" may indicate their popularity for longer commutes or quick, short-distance trips. Businesses can leverage this information to allocate resources effectively and optimise vehicle availability based on demand trends.
 
-[Vehicle Type Screenshot]
+![alt image](https://github.com/soumil-saurya/Ola_Data_Analysis/blob/main/Vehicle%20Type%20Dashboard%20Screenshot.png?raw=true)
 
 ### 3. Revenue by Payment Method
 -    Revenue by Payment Method (Stacked Bar Chart)
@@ -235,7 +235,7 @@ This visualization highlights which vehicle types are most utilized in terms of 
 
      This visualization provides insights into ride patterns, including peak travel days and the variability of ride distances by helping in demand forecasting and route optimization.
 
-
+![alt image](https://github.com/soumil-saurya/Ola_Data_Analysis/blob/main/Revenue%20Dashboard%20Screenshot.png?raw=true)
 
 ### 4. Reason for Cancelling Ride Either by Customer or Driver
 A pie chart is used to visually represent the most prominent reasons why customers and drivers cancel rides.
@@ -246,26 +246,32 @@ For customers, the leading reason for cancellations is often "Driver is not movi
 
 For drivers, "Personal & Car related issues" is typically the top reason, showcasing operational challenges.
 
+![alt image](https://github.com/soumil-saurya/Ola_Data_Analysis/blob/main/Cancellation%20Dashboard%20Screenshot.png?raw=true)
 
 ### 5. Customer Rating and Driver Rating
 Driver Ratings: These reflect customer satisfaction with the driver, including professionalism, driving skills, and overall service quality. High ratings indicate positive experiences, while low ratings highlight areas for improvement.
 
 Customer Ratings: These are provided by drivers to evaluate the behavior and cooperation of customers during the ride. They help maintain service standards and identify problematic behaviors.
 
+![alt image](https://github.com/soumil-saurya/Ola_Data_Analysis/blob/main/Rating%20Dashboard%20Screenshot.png?raw=true)
 ## Key Insights and Learnings
 
 The below Power BI dashboard provides a quick overview of key performance metrics, including KPIs such as total bookings, total revenue, and total distance travelled, all of which are dynamically updated through a date slicer.
 Users can easily filter data by date to make informed decisions based on the selected time period. The dashboard features card visualizations for each metric and a line chart to visualize trends over time, helping users track performance and spot patterns efficiently.
 
-[Screenshot dashboard]
+![Screenshot dashboard](https://github.com/soumil-saurya/Ola_Data_Analysis/blob/main/Ola%20Dashboard%20Screenshot.png?raw=true)
 
 Through this project, we derived several key insights about Bengaluru’s ride-hailing data:
 
-Booking Status Trends: Success rates were consistent but cancellations by customers peaked during certain times of the day, particularly during bad weather.
-High Demand on Weekends and Match Days: The data confirmed higher booking volumes during weekends and on match days, which could influence ride-hailing strategies for these days.
-Popular Vehicle Types: Autos and Prime Sedans saw the highest demand while eBikes were less frequent but growing in popularity.
-Cancellation Insights: The most common reasons for cancellations were "Driver is not moving towards pickup location" and "Change of plans."
-Incomplete Rides: Vehicle breakdowns were the leading cause of incomplete rides, followed by customer demands.
+**Booking Status Trends**: Success rates were consistent but cancellations by customers peaked during certain times of the day, particularly during bad weather.
+
+**High Demand on Weekends and Match Days**: The data confirmed higher booking volumes during weekends and on match days, which could influence ride-hailing strategies for these days.
+
+**Popular Vehicle Types**: Autos and Prime Sedans saw the highest demand while eBikes were less frequent but growing in popularity.
+
+**Cancellation Insights**: The most common reasons for cancellations were "Driver is not moving towards pickup location" and "Change of plans."
+
+**Incomplete Rides**: Vehicle breakdowns were the leading cause of incomplete rides, followed by customer demands.
 
 
 ## Conclusion
