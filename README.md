@@ -1,7 +1,7 @@
 
 # Ola Data Analysis
 ## Overview
-Have you ever wondered how ride-hailing companies like Ola manage massive amounts of booking data? This project delves into Bengaluru's ride-hailing landscape by analyzing an extensive dataset of 103,025 Ola bookings.
+Have you ever wondered how ride-hailing companies like Ola manage massive amounts of booking data? This project delves into Bengaluru's ride-hailing landscape by analyzing an extensive dataset of **103,025** Ola bookings.
 
 We delve into key aspects such as booking statuses, cancellations, ride distances, payment methods, and ratings. Utilizing SQL for data preparation and Power BI for visualization, we uncover intriguing trends like high demand on weekends, popular vehicle types, and common reasons for cancellations.
 
